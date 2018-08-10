@@ -15,11 +15,11 @@
 2.  在Kubernetes菜单下，单击左侧导航栏中的**集群** \> **子账号授权**，进入子账号授权页面。
 3.  在子账号列表中选择需要授权的子账号，单击**授权**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15116/6471_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15116/15338940906471_zh-CN.png)
 
 4.  进入授权资源页面，您可以通过单击表格左上角的加号添加集群或命名空间级别的权限配置，并选择相应的预置角色；也可以单击配置行首的减号删除目标角色。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15116/7436_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15116/15338940907436_zh-CN.png)
 
     集群和命名空间的预置角色定义可查看下面的角色权限说明：
 
@@ -32,18 +32,18 @@
 
 5.  完成配置后，如果涉及目标子账号RAM集群权限的变更，在更新授权策略页面会展示配置项对应的Kubernetes集群RAM权限参考配置，您可以根据页面中的指导在RAM控制台完成子账号授权的更新。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15116/7440_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15116/15338940907440_zh-CN.png)
 
 
 ## 补充说明 {#section_q1y_pv4_f2b .section}
 
 为了不影响子账号对当前存量可访问kubernetes集群的正常使用，容器服务控制台会暂时兼容旧的集群访问权限控制，在一段时间对原有子账号可访问kubernetes集群不进行RBAC的应用权限校验，如果您是子账号用户，请您根据下面的集群类型和兼容方式，及时联系主账号进行授权操作。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15116/7444_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15116/15338940907444_zh-CN.png)
 
 对于由当前子账号自身创建的存量集群，可以通过在集群详情页面单击**升级当前集群授权信息**，完成集群应用权限的自动升级。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15116/7446_zh-CN.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15116/15338940917446_zh-CN.jpg)
 
 在公告期结束后，仍旧没有由主账号授权或进行权限管理升级的子账号，子账号将被禁止访问集群对应的应用控制台。
 
