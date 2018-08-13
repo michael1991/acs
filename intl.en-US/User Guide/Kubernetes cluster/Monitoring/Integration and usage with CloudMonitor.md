@@ -6,27 +6,27 @@ Check whether `alicloud-monitor-controller` has been deployed in the `kube-syste
 
 ## Procedure  {#section_vzw_fnz_g2b .section}
 
-1.  Log on to the [Container Service console](https://cs.console.aliyun.com). 
+1.  Log on to the [Container Service console](https://cs.console.aliyun.com).
 2.  Under Kubernetes, click **Deployment** in the left-side navigation pane to enter the Deployment List page. 
 3.  Select the target deployment, click **Monitor** on the right. You can also click **Monitor** on the Deployment page of the built-in kubernetes dashboard.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/6586_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/15341550676586_en-US.png)
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/6587_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/15341550676587_en-US.png)
 
     In this case, you jump to the corresponding Application group details page of CloudMonitor.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/6588_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/15341550676588_en-US.jpg)
 
 4.  Application group supports monitoring in two dimensions: **group** and **instance**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/6589_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/15341550676589_en-US.jpg)
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/6590_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/15341550676590_en-US.jpg)
 
 5.  For alarm settings, the index of group level starts with group, and the instance level index starts with pod.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/6591_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/15341550676591_en-US.jpg)
 
 
 ## Upgrade cluster version {#section_f1x_fnz_g2b .section}
@@ -34,13 +34,13 @@ Check whether `alicloud-monitor-controller` has been deployed in the `kube-syste
 1.  Log on to the [Container Service console](https://cs.console.aliyun.com).
 2.  Under Kubernetes, click **Application** \> **Deployment** in the left-side navigation pane to enter the Deployment List page. Click **Create by template** in the upper-right corner.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/6592_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/15341550676592_en-US.png)
 
 3.  Select the target cluster, kube-system namespace, and use the following sample template. Then click **Create**.
 
     **Note:** Replace REGION and CLUSTER\_ID with your actual cluster information, and redeploy heapster yaml template.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/6593_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/15341550676593_en-US.png)
 
     An example of heapster template is as follows. If you have an earlier version of the heapster in the cluster, you can log on to the Kubernetes cluster and run the `kubectl apply -f xxx.yaml` command to upgrade it.
 
@@ -81,8 +81,8 @@ Check whether `alicloud-monitor-controller` has been deployed in the `kube-syste
     metadata:
       name: alicloud-monitor-controller
       namespace: kube-system
-    spec:
-      replicas: 1
+    spec: 
+      replicas: 1 
       template:
         metadata:
           labels:
@@ -113,12 +113,12 @@ Check whether `alicloud-monitor-controller` has been deployed in the `kube-syste
             - --v=4
     ```
 
-4.  Go to the Kubernetes console, in the kube-system namespace, you can see that the two deployments are running, and the upgrade is complete.
+4.  Go to the Kubernetes console. In the kube-system namespace, you can see that the two deployments are running, and the upgrade is complete.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/6594_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/15341550686594_en-US.png)
 
 
 If you do not know the REGION information, you can go to the ECS console and select the region where your cluster resides. The last segment of the page URL address is REGION.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/6595_en-US.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15149/15341550686595_en-US.jpg)
 
