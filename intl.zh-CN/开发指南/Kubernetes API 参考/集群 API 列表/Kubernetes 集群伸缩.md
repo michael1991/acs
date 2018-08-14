@@ -1,6 +1,6 @@
 # Kubernetes 集群伸缩 {#reference_agj_fx2_xdb .reference}
 
-增加或者集群中Worker节点的数量\(该操作仅限于ROS生成的资源\)。
+增加或者删除集群中Worker节点的数量\(该操作仅限于ROS生成的资源\)。
 
 ## 请求信息 {#section_r2n_jx2_xdb .section}
 
@@ -78,11 +78,11 @@ PUT /clusters/Cccfd68c474454665ace07efce924f75f HTTP/1.1
 {
     "disable_rollback": true,
     "timeout_mins": 60,
-    "num_of_nodes": 8,
     "worker_instance_type": "ecs.sn1ne.large",
     "worker_system_disk_category": "cloud_efficiency",
     "worker_system_disk_size": 40,
-    "login_password": "Hello1234"
+    "login_password": "Hello1234",
+    "num_of_nodes": 8
 }
 ```
 
