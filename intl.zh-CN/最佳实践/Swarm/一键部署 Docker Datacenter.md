@@ -10,7 +10,7 @@ Docker Datacenter（DDC）是 Docker 发布的企业级容器管理和服务部�
 
 DDC 在 Docker 官网的地址为 [https://www.docker.com/products/docker-datacenter](https://www.docker.com/products/docker-datacenter)。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7266/6145_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7266/15344062396145_zh-CN.png)
 
 DDC 与 Docker 公司的另外一个在线产品 Docker Cloud 对应。不过 DDC 主要针对企业用户在内部部署。用户注册自己的 Dokcer 镜像到 DTR，UCP 管理整个 Docker 集群。并且这两个组件都提供了 Web 界面。
 
@@ -18,7 +18,7 @@ DDC 与 Docker 公司的另外一个在线产品 Docker Cloud 对应。不过 DD
 
 ## DDC 部署架构 {#section_ukr_vv1_ydb .section}
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7266/6146_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7266/15344062396146_zh-CN.png)
 
 在上面的基础架构图里，Controller 主要运行 UCP 组件，DTR 运行 DTR 组件， Worker 主要运行客户自己的 Docker 服务。整个 DDC 环境都部署在 VPC 网络之下，所有的 ECS 加入同一个安全组。每个组件都提供了一个负载均衡，供外网访问。而运维操作则是通过跳板机实现。另一方面为了提升可用性，整个 DDC 环境都是高可用部署，也就是说 Controller 至少有两台，同理 DTR 也至少有两台。
 
@@ -32,17 +32,17 @@ DDC 与 Docker 公司的另外一个在线产品 Docker Cloud 对应。不过 DD
 
 填写如下图中必填的信息或者根据您的需求调整信息后，单击**创建**就可以部署一套 DDC。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7266/6147_zh-CN.PNG)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7266/15344062396147_zh-CN.PNG)
 
 ## DDC 访问 {#section_ykr_vv1_ydb .section}
 
 使用 ROS 创建 DDC 成功后，您可以进入 ROS 的资源栈管理页面，找到所创建的资源栈，并单击资源栈名称或单击右侧的**管理**进入资源栈的概要信息页面。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7266/6148_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7266/15344062396148_zh-CN.png)
 
 您可以输出查看登录 UCP 和 DTR 的地址。
 
 在浏览器中输入 UCP 的地址就会显示 UCP 的访问页面，输入在安装 UCP 时创建的管理账号和密码，系统会提示导入 Licence 文件，把准备好的 Licence 导入，即可进入 UCP 的控制界面。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7266/6149_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7266/15344062396149_zh-CN.png)
 
