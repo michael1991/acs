@@ -21,11 +21,11 @@ Alibaba Cloud kubernetes service has two modes: one is the classic cluster appro
 
 The comparison architecture of serverless kubernetes Container Service and kubernetes Container Service is shown below.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6864/15341354991393_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6864/15343911441393_en-US.png)
 
 ## Scenarios {#section_w2q_2gc_5db .section}
 
 Serverless kubernetes has a wide range of application scenarios. The high portability and flexibility based on containers, and the high elasticity and isolation of Infrastructure as a Service \(IaaS\) provide a powerful base operating facility for serverless applications. Serverless applications include multimedia processing, captured data modification, IoT sensor data processing, streaming computing, chat robotics, batch computing, web applications, mobile application backend services, business logic processing, and continuous integration.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6864/15341354991394_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6864/15343911441394_en-US.png)
 
