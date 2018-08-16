@@ -12,7 +12,7 @@
 
 在 Kubernetes 中，Pod 是一组亲密耦合的容器集合，容器之间共享同一 Network Namespace。借助 Kubernetes 中 Initializer 的扩展机制，在不修改业务 Pod 部署描述前提下，可以为每个业务 Pod 自动创建和启动一个 Envoy 的容器。Envoy 接管同一 pod 内业务容器的进出流量，从而通过在 Envoy 上的控制操作来实现流量管理、微服务跟踪、安全认证、访问控制和策略实施等一系列微服务治理功能。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7252/1151_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7252/15344018471151_zh-CN.png)
 
 Istio 服务网格逻辑上分为数据面板和控制面板。
 
@@ -43,11 +43,11 @@ Istio 服务网格逻辑上分为数据面板和控制面板。
 3.  开始创建集群，进行集群参数配置。具体如何创建 Kubernetes 集群，请参见 [创建 Kubernetes 集群](../../../../intl.zh-CN/用户指南/Kubernetes 集群.md#)。
 4.  集群创建完毕后，等待目标集群的状态变为**运行中**。然后单击集群右侧的**管理**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7252/1153_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7252/15344018471153_zh-CN.png)
 
 5.  在集群管理页面，您可以根据集群管理页面信息，配置相应的连接信息。您可以使用 [通过 kubectl 连接 Kubernetes 集群](../../../../intl.zh-CN/用户指南/Kubernetes 集群/集群管理/通过 kubectl 连接 Kubernetes 集群.md#) 或 [SSH 访问 Kubernetes 集群](../../../../intl.zh-CN/用户指南/Kubernetes 集群/集群管理/SSH访问Kubernetes集群.md#) 这两种方式连接集群进行管理。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7252/1154_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7252/15344018471154_zh-CN.png)
 
 
 **部署 istio 发行版**
@@ -88,7 +88,7 @@ BookInfo 是一个类似网上书店的应用，由若干个不同语言编写�
 
 关于该 BookInfo 应用的更多信息，请参见 [BookInfo指南](https://istio.io/docs/guides/bookinfo.html)。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7252/1155_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7252/15344018481155_zh-CN.png)
 
 执行如下命令，部署测试应用 Bookinfo 。
 
@@ -118,7 +118,7 @@ curl -o /dev/null -s -w "%{http_code}\n" http://${GATEWAY_URL}/productpage
 
 您可以通过浏览器打开`http://${GATEWAY_URL}/productpage` 来访问应用。GATEWAY\_URL 即是 Ingress 的 IP 地址。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7252/1156_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7252/15344018481156_zh-CN.png)
 
 **部署 Jaeger 追踪系统**
 
@@ -153,15 +153,15 @@ zipkin             ClusterIP      None            <none>           9411/TCP
 
 通过多次访问 BookInfo 应用，生成调用链信息，我们可以清楚地看到服务的调用链信息。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7252/1159_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7252/15344018481159_zh-CN.png)
 
 单击某个具体的 Trace，可以查看详情。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7252/1160_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7252/15344018481160_zh-CN.png)
 
 您也可以查看 DAG 。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7252/1163_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7252/15344018481163_zh-CN.png)
 
 ## Istio 分布式追踪实现原理 {#section_kbc_phd_5db .section}
 
