@@ -1,6 +1,6 @@
 # What is Container Service {#concept_q41_5t5_tdb .concept}
 
-Container Service provides the high-performance and scalable container application management service, which enables you to manage the lifecycle of containerized applications by using Docker and Kubernetes.  Container Service provides multiple application release methods and the continuous delivery ability, and supports microservice architecture. By simplifying the setup of container cluster and integrating with the Alibaba Cloud abilities of virtualization, storage, network, and security, Container Service makes an ideal running cloud environment for containers.
+Container Service provides the high-performance and scalable container application management service, which enables you to manage the lifecycle of containerized applications by using Docker and Kubernetes. Container Service provides multiple application release methods and the continuous delivery ability, and supports microservice architecture. By simplifying the setup of container cluster and integrating with the Alibaba Cloud abilities of virtualization, storage, network, and security, Container Service makes an ideal running cloud environment for containers.
 
 ## Features {#section_jkt_cv5_tdb .section}
 
@@ -22,7 +22,7 @@ Container Service provides the high-performance and scalable container applicati
 
 -   **Storage**
 
-    Supports data volume management. OSSFS, cloud disks, and Network Attached Storage \(NAS\) are supported.
+    Supports data volume management. OSSFS, cloud disks, and Network Attached Storage \(NAS\).
 
 -   **Log**
 
@@ -60,4 +60,8 @@ Container Service supports both swarm and Kubernetes, migrating existing systems
 -   Supports affinity policy and horizontal scaling of services.
 -   Supports cross-zone high availability and disaster recovery.
 -   Supports the APIs for cluster and application management to easily interconnect with the continuous integration and private deployment system.
+
+## Container Service Learning Path {#section_bgk_m4c_p2b .section}
+
+You can quickly learn about basic functions such as creating clusters and applications with the help of [Container Service Learning Path](https://www.alibabacloud.com/getting-started/learningpath/cs). Combined with other products of Alibaba Cloud, Container Service provides you with the best container solutions for your complex business.
 
