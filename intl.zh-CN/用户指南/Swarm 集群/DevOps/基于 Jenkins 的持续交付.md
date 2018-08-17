@@ -10,7 +10,7 @@
 
 大致流程如下图所示：
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/5455_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/15344951055455_zh-CN.png)
 
 slave-nodejs 用于进行单元测试，构建镜像和推送镜像的 slave 节点。
 
@@ -68,15 +68,15 @@ slave-nodejs:
 
 **Note:** 有关如何使用编排模板创建应用，参见[创建应用](intl.zh-CN/用户指南/Swarm 集群/应用管理/创建应用.md#)。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/5456_zh-CN.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/15344951065456_zh-CN.jpg)
 
 创建成功后，Jenkins 应用和 slave 节点显示在服务列表中。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/5457_zh-CN.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/15344951065457_zh-CN.jpg)
 
 打开容器服务提供的访问端点，就可以使用刚刚部署的 Jenkins 应用。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/5459_zh-CN.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/15344951065459_zh-CN.jpg)
 
 ## 步骤 2 实现自动测试及自动构建推送镜像 {#section_jnt_kn5_xdb .section}
 
@@ -84,7 +84,7 @@ slave-nodejs:
 
 打开 Jenkins 应用，进入系统设置界面，选择管理节点，新建节点，配置相应参数。如下图所示。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/5461_zh-CN.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/15344951065461_zh-CN.jpg)
 
 **Note:** 
 
@@ -97,15 +97,15 @@ slave-nodejs:
 1.  新建 Item，选择构建一个自由风格的软件项目。
 2.  填写项目名称，并选择项目运行节点。此示例中填写上述准备的 slave-nodejs-ut 节点。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/5462_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/15344951065462_zh-CN.png)
 
 3.  配置源码管理和代码分支。此示例中源代码使用 GitHub 管理。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/5463_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/15344951065463_zh-CN.png)
 
 4.  配置构建触发器，此示例采用结合 GitHub Webhooks & services 实现自动触发项目执行。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/5464_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/15344951065464_zh-CN.png)
 
 5.  在 GitHub 中添加 Jenkins 的 service hook，完成自动触发实现。
 
@@ -115,11 +115,11 @@ slave-nodejs:
     http://jenkins.cd****************.cn-beijing.alicontainer.com/github-webhook/
     ```
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/5465_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/15344951065465_zh-CN.png)
 
 6.  增加 Execute shell 类型的构建步骤，编写 shell 脚本执行测试。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/5466_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/15344951065466_zh-CN.png)
 
     本示例中的命令如下所示：
 
@@ -135,11 +135,11 @@ slave-nodejs:
 
 在源码管理模块选择**Subversion**。Repository URL中填入 SVN repository 的地址。（如果 Jenkins master 时区和 SVN 服务器时区不一致，请在 repository 地址末尾添加 `@HEAD`）Credentials中添加 SVN 服务器的用户名和密码。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/5467_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/15344951065467_zh-CN.png)
 
 配置构建触发器，此示例采用 Post-commit hook 实现自动触发项目执行。在身份验证令牌中填写您设置的 token。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/5468_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/15344951065468_zh-CN.png)
 
 登录 SVN 服务器，在代码 repository（svn-java-demo）的hooks 文件目录下创建 post-commit文件。
 
@@ -172,11 +172,11 @@ curl -u test:test
 3.  配置源码管理和代码分支。此示例中源代码使用 GitHub 管理。
 4.  添加如下触发器，设置只有在单元测试成功之后才执行自动构建镜像。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/5469_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/15344951065469_zh-CN.png)
 
 5.  编写构建镜像和推送镜像的 shell 脚本。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/5470_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/15344951065470_zh-CN.png)
 
     本示例的命令如下所示：
 
@@ -213,7 +213,7 @@ labels:
 
     **Note:** 有关如何创建触发器，参见[触发器](../../../../intl.zh-CN/开发指南/Swarm API参考/触发器/触发器.md#)。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/5471_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/15344951065471_zh-CN.png)
 
 2.  在2.3 中的 shell 脚本中添加一行，地址即为上文创建的触发器给出的触发器链接。
 
@@ -240,20 +240,20 @@ labels:
 
 1.  在 Jenkins 主页，选择系统管理，系统设置，配置 Jenkins 系统管理员邮箱。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/6211_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/15344951066211_zh-CN.png)
 
 2.  安装 Extended Email Notification plugin，配置 SMTP server 等相关信息，并设置默认邮件接收人列表。如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/5472_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/15344951075472_zh-CN.png)
 
     以上是 Jenkins 应用系统参数设置，下面是为需要用邮件推送结果的 Jenkins 项目进行相关配置。
 
 3.  在 Jenkins 项目中添加构建后操作步骤。选择 Editable Email Notification 类型，填写邮件接收人列表。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/5474_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/15344951075474_zh-CN.png)
 
 4.  添加邮件发送触发器。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/5475_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7101/15344951075475_zh-CN.png)
 
 
