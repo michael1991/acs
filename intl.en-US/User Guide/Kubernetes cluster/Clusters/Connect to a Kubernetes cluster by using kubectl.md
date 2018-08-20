@@ -33,6 +33,6 @@ To connect to a Kubernetes cluster from a client computer, use the Kubernetes co
 
         In the **Connection Information** section, view the Master node SSH IP address.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6883/2009_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6883/15347586932009_en-US.png)
 
 
