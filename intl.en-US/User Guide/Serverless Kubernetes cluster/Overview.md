@@ -18,5 +18,5 @@ Serverless Kubernetes is free to use during the beta period. The default 2C4G sp
 
 ## Comparison with Container Service {#section_vzy_gzz_xdb .section}
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6957/15341463324736_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6957/15350953064736_en-US.png)
 
