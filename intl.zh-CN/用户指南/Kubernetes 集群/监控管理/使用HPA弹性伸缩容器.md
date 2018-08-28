@@ -14,7 +14,7 @@
 1.  登录 [容器服务管理控制台](https://cs.console.aliyun.com)。
 2.  在Kubernetes菜单下，单击左侧导航栏中的**应用** \> **部署**，单击右上角的**使用镜像创建**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15350235116861_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15354432386861_zh-CN.png)
 
 3.  填写应用的名称，设置应用部署集群和命名空间，单击**下一步**。
 4.  首先进行应用设置，设置副本数量，然后勾选**开启**自动伸缩，设置伸缩的条件和配置。
@@ -23,23 +23,23 @@
     -   **触发条件**：资源使用率的百分比，超过该使用量，容器开始扩容。
     -   **最大容器数量**：该Deployment可扩容的容器数量上限。
     -   **最小容器数量**：该Deployment可缩容的容器数量下限。
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15350235126865_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15354432386865_zh-CN.png)
 
 5.  进行容器设置，选择镜像，并设置所需的资源。然后单击**下一步**
 
     **说明：** 您必须为Deployment设置所需资源，否则无法进行容器自动伸缩。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15350235126864_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15354432386864_zh-CN.png)
 
 6.  进入访问设置页面，本例中不进行访问设置，单击**创建**。
 
     此时一个支持HPA的Deployment就已经创建完毕，您可在部署的详情中查看伸缩组信息。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15350235126880_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15354432386880_zh-CN.png)
 
 7.  在实际使用环境中，应用会根据CPU负载进行伸缩。您也可在测试环境中验证弹性伸缩，通过给Pod进行CPU压测，可以发现Pod在半分钟内即可完成水平的扩展。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15350235126887_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15354432386887_zh-CN.png)
 
 
 ## 方法2 通过kubectl命令进行使用 {#section_ykx_3h4_k2b .section}
