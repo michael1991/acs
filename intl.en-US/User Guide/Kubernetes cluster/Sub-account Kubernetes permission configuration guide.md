@@ -15,11 +15,11 @@ This document helps you understand how to configure the kubernetes Resource Acce
 2.  Click Kubernetes **Clusters** \> **Authorization**in the left-side navigation pane to go to the Authorization page.
 3.  In the sub-account list, select the sub-account that requires authorization, and click **Authorize**.
 
-    ![](images/6471_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15116/15355099246471_en-US.png)
 
 4.  On the Resource Authorization page, you can add a cluster or namespace level permission configuration by clicking the plus sign in the upper left corner of the table, and select an role. You can also click the minus sign at the beginning of the configuration line to remove the target role.
 
-    ![](images/7436_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15116/15355099247436_en-US.png)
 
     For information about definitions of roles in clusters and namespaces, see the permission description below:
 
