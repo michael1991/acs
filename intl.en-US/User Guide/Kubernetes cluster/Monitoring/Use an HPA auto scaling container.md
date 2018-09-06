@@ -14,7 +14,7 @@ In Alibaba Cloud Container Service, HPA has been integrated. You can easily crea
 1.  Log on to the [Container Service console](https://cs.console.aliyun.com).
 2.  Under Kubernetes, click **Application** \> **Deployment** in the left-side navigation pane. Click **Create by image** in the upper-right corner.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15354432406861_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15362257596861_en-US.png)
 
 3.  Enter the application name, select the cluster and namespace, and click **Next**.
 4.  Configure the application settings. Set the number of replicas, select the **Enable** box for Automatic Scaling, and configure the settings for scaling.
@@ -23,23 +23,23 @@ In Alibaba Cloud Container Service, HPA has been integrated. You can easily crea
     -   **Condition**: The percentage value of resource usage. The container begins to expand when the resource usage exceeds this value.
     -   **Maximum Replicas**: The maximum number of replicas that the deployment can expand to.
     -   **Minimum Replicas**: The minimum number of replicas that the deployment can contract to.
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15354432406865_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15362257596865_en-US.png)
 
 5.  Configure the container. Select an image and configure the required resources. Click **Next**.
 
     **Note:** You must configure the required resources for the deployment. Otherwise, container auto scaling cannot be achieved.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15354432406864_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15362257596864_en-US.png)
 
 6.  In the Access Control page, do not configure any settings in this example. Click **Create** directly.
 
     Now a deployment that supports HPA has been created. You can view the auto scaling group information in the details of your deployment.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15354432416880_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15362257596880_en-US.png)
 
 7.  In the actual environment, the application scales according to the CPU load. You can also verify auto scaling in the test environment. By performing a CPU pressure test on the pod, you can find that the pod can complete the horizontal expansion in half a minute.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15354432416887_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15444/15362257596887_en-US.png)
 
 
 ## Method 2 Use kubectl commands to configure container auto scaling {#section_ykx_3h4_k2b .section}
