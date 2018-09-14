@@ -22,7 +22,7 @@
 
         ```
         mkdir $HOME/.kube
-        scp -i [.pem 私钥文件在本地机器上的存储路径] root@:/etc/kubernetes/kube.conf $HOME/.kube/config
+        scp -i [.pem 私钥文件在本地机器上的存储路径] root@<master-public-ip>:/etc/kubernetes/kube.conf $HOME/.kube/config
         ```
 
     您可以在集群信息页面查看集群的 `master-public-ip`。
